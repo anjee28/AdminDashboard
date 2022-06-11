@@ -20,7 +20,7 @@ div {
     display: grid;
     height: 100%;
     grid-template-columns: 1fr 6fr;
-    grid-template-rows: 1fr 5fr;
+    grid-template-rows: 1fr 3fr;
 }
 
 .header {
@@ -193,7 +193,7 @@ div {
 .sidebar {
     grid-area: 1 / 1 / 3 / 2;
     display: grid;
-    grid-template-rows: 1fr 2fr 6fr;
+    grid-template-rows: 1fr 2fr 2fr;
     background: #0ea5e9;
 }
 
@@ -227,29 +227,64 @@ div {
 }
 
 .projects {
-    display: block;
     grid-area: 1 / 1 / 3 / 2;
+    display: grid;
+    height: 82vh;
+    grid-template-rows: 32px 1fr;
+    gap: 16px;
 }
 
 .main div {
-    border: 1px solid black;
-    margin-bottom: 16px;
+    /* border: 1px solid black; */
 }
 
 .projects .title {
-    border: 1px solid black;
+
     font-size: 16px;
-    height: 28px;
+    font-weight: bold;
     width: 100%;
-    display: block;
+    display: flex;
+    align-items: center;
 }
 
 .projects p {
     margin: 0;
-    height: 40%;
 }
 
+.project {
+    overflow: scroll;
+    display: grid;
+    gap: 12px;
+    grid-template-rows: repeat(2, 200px);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 350px));
 
+}
+
+.project::-webkit-scrollbar {
+    display: none;
+  }
+
+.input {
+    display: grid;
+    background-color: white;
+    grid-template-rows: 24px 1fr 36px;
+    padding: 12px;
+    padding-left: 28px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 3px rgb(121, 121, 121);
+}
+
+.input .head {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.input .foot {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    gap: 16px;
+}
 
 .annoucements {
     grid-area: 1 / 2 / 2 / 3;
@@ -263,3 +298,4 @@ div div {
     box-sizing: border-box;
     padding: 4px;
 }
+
