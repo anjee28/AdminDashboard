@@ -286,17 +286,24 @@ div {
     border-left-width: 8px;
     border-left-color: #0c4a6e ;
     border-left-style: solid;
+    color: gray;
 }
 
 .input:hover {
     border-left-width: 0px;
     transition: 0.25s;
+    color: black;
 }
 
 .input .head {
     font-size: 16px;
     font-weight: bold;
     color: #0c4a6e;
+}
+
+.input .body {
+    font-size: 14px;
+    line-height: 1.5em;
 }
 
 .input .foot {
@@ -337,14 +344,18 @@ div {
 
 .announce {
     grid-area: 2 / 0 / 3 / 0;
-    
-
     border-radius: 0;
     margin: 0; 
     display: grid;
     grid-template-rows: 20px min(60px);
     padding-left: 28px;
     padding-right: 20px;
+    color: gray;
+}
+
+.announce:hover {
+    color: black;
+    transition: 0.25s;
 }
 
 .announceTitle {
@@ -362,7 +373,7 @@ div {
     font-weight: 300;
     border-bottom: 1px solid grey;
     padding-bottom: 3px;
-    color: gray;
+
 }
 
 .announceBody p {
@@ -443,6 +454,12 @@ div {
     padding: 0;
     display: flex;
     align-items: flex-end;
+}
+
+.trendUser a {
+    text-decoration: none;
+    color: #0c4a6e;
+    font-weight: 600;
 }
 
 .trendName{
